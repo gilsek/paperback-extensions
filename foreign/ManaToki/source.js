@@ -441,7 +441,7 @@ const paperback_extensions_common_1 = require("paperback-extensions-common");
 const TokiSettings_1 = require("./TokiSettings");
 const TokiParser_1 = require("./TokiParser");
 const GeneralHelper_1 = require("./GeneralHelper");
-exports.DEFAULT_URL = "https://manatoki111.net";
+exports.DEFAULT_URL = "https://manatoki.net";
 exports.ManaTokiInfo = {
     name: "ManaToki (마나토끼)",
     icon: "icon.png",
@@ -932,7 +932,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.menuGeneralSettings = exports.getStateData = void 0;
 const getStateData = (stateManager) => __awaiter(void 0, void 0, void 0, function* () {
     const domain = (yield stateManager.retrieve("domain"))
-        || "https://manatoki111.net";
+        || "https://manatoki.net";
     return { domain };
 });
 exports.getStateData = getStateData;
