@@ -449,7 +449,7 @@ exports.ManaTokiInfo = {
     version: "0.1.0",
     description: "Extension that scrapes webtoons from 마나토끼.",
     author: "Nouun",
-    authorWebsite: "https://github.com/nouun/",
+    authorWebsite: "https://github.com/gilsek/",
     contentRating: paperback_extensions_common_1.ContentRating.ADULT,
     language: paperback_extensions_common_1.LanguageCode.KOREAN,
     sourceTags: [
