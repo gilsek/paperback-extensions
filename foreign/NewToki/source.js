@@ -853,7 +853,7 @@ const parseChapterDetails = (data, cheerio, mangaId, id) => {
         if (pages.length == 0) {
             pages = $("div > p > img")
                 .toArray()
-                .map((page) => $(page).get(0).attribs)
+                .map((page) => $(page).get(0).get(0).attribs)
                 .map((attribs) => {
                 var _a;
                 return attribs[(_a = Object.keys(attribs).filter((attrib) => attrib.startsWith("data-"))[0]) !== null && _a !== void 0 ? _a : "data"];
