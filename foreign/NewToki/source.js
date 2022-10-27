@@ -850,16 +850,28 @@ const parseChapterDetails = (data, cheerio, mangaId, id) => {
             var _a;
             return attribs[(_a = Object.keys(attribs).filter((attrib) => attrib.startsWith("data-"))[0]) !== null && _a !== void 0 ? _a : "data"];
         });
+        if (pages.length == 0) {
+            pages = $("div > p > img")
+                .toArray()
+                .map((page) => $(page).get(0).attribs)
+                .map((attribs) => {
+                var _a;
+                return attribs[(_a = Object.keys(attribs).filter((attrib) => attrib.startsWith("data-"))[0]) !== null && _a !== void 0 ? _a : "data"];
+            });
+        }
+        try { }
+        catch (_b) {
+            throw Error("Unable to evaluate server chapter code.");
+        }
+        return createChapterDetails({
+            mangaId,
+            id,
+            pages,
+            longStrip: false,
+        });
     }
-    catch (_b) {
-        throw Error("Unable to evaluate server chapter code.");
-    }
-    return createChapterDetails({
-        mangaId,
-        id,
-        pages,
-        longStrip: false,
-    });
+    finally { }
+    ;
 };
 exports.parseChapterDetails = parseChapterDetails;
 
