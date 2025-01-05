@@ -463,7 +463,7 @@ class ManaToki extends paperback_extensions_common_1.Source {
     constructor() {
         super(...arguments);
         // URL = DEFAULT_URL;
-        this.URL = "http://manatoki466.net";
+        this.URL = this.getBaseURL();
         this.requestManager = createRequestManager({
             requestsPerSecond: 0.5,
             requestTimeout: 10000,
