@@ -567,6 +567,7 @@ class ManaToki extends paperback_extensions_common_1.Source {
                 method: "GET",
             });
             const data = yield this.requestManager.schedule(req, 2);
+            console.log("Original Script: " + data);
             return (0, TokiParser_1.parseChapterDetails)(data.data, this.cheerio, mangaId, id);
         });
     }
@@ -597,7 +598,7 @@ class ManaToki extends paperback_extensions_common_1.Source {
                     }),
                     section: createHomeSection({
                         id: 'list',
-                        title: '만화목록2',
+                        title: '만화목록',
                         view_more: true
                     }),
                 },
