@@ -932,8 +932,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.menuGeneralSettings = exports.getStateData = void 0;
 const getStateData = (stateManager) => __awaiter(void 0, void 0, void 0, function* () {
-    const domain = (yield stateManager.retrieve("domain"))
-        || "https://manatoki.net";
+    const domain = yield stateManager.retrieve("domain");
     return { domain };
 });
 exports.getStateData = getStateData;
