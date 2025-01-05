@@ -463,7 +463,6 @@ class ManaToki extends paperback_extensions_common_1.Source {
     constructor() {
         super(...arguments);
         this.URL = exports.DEFAULT_URL;
-        // URL = this.getBaseURL();
         this.requestManager = createRequestManager({
             requestsPerSecond: 0.5,
             requestTimeout: 10000,
@@ -598,7 +597,7 @@ class ManaToki extends paperback_extensions_common_1.Source {
                     }),
                     section: createHomeSection({
                         id: 'list',
-                        title: '만화목록',
+                        title: '만화목록2',
                         view_more: true
                     }),
                 },
