@@ -441,7 +441,7 @@ const paperback_extensions_common_1 = require("paperback-extensions-common");
 const TokiSettings_1 = require("./TokiSettings");
 const TokiParser_1 = require("./TokiParser");
 const GeneralHelper_1 = require("./GeneralHelper");
-exports.DEFAULT_URL = "http://manatoki466.net";
+exports.DEFAULT_URL = "http://manatoki.net";
 exports.ManaTokiInfo = {
     name: "ManaToki (마나토끼)",
     icon: "icon.png",
