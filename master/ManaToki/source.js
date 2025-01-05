@@ -441,7 +441,7 @@ const paperback_extensions_common_1 = require("paperback-extensions-common");
 const TokiSettings_1 = require("./TokiSettings");
 const TokiParser_1 = require("./TokiParser");
 const GeneralHelper_1 = require("./GeneralHelper");
-exports.DEFAULT_URL = "http://manatoki.net";
+exports.DEFAULT_URL = "http://manatoki466.net";
 exports.ManaTokiInfo = {
     name: "ManaToki (마나토끼)",
     icon: "icon.png",
@@ -462,8 +462,8 @@ exports.ManaTokiInfo = {
 class ManaToki extends paperback_extensions_common_1.Source {
     constructor() {
         super(...arguments);
-        // URL = DEFAULT_URL;
-        this.URL = this.getBaseURL();
+        this.URL = exports.DEFAULT_URL;
+        // URL = this.getBaseURL();
         this.requestManager = createRequestManager({
             requestsPerSecond: 0.5,
             requestTimeout: 10000,
@@ -932,7 +932,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.menuGeneralSettings = exports.getStateData = void 0;
 const getStateData = (stateManager) => __awaiter(void 0, void 0, void 0, function* () {
-    const domain = yield stateManager.retrieve("domain");
+    const domain = (yield stateManager.retrieve("domain"))
+        || "https://manatoki.net";
     return { domain };
 });
 exports.getStateData = getStateData;
