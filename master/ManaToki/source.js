@@ -567,7 +567,7 @@ class ManaToki extends paperback_extensions_common_1.Source {
                 method: "GET",
             });
             const data = yield this.requestManager.schedule(req, 2);
-            console.log("Original Script: " + data);
+            console.log("Original Script2: " + data);
             return (0, TokiParser_1.parseChapterDetails)(data.data, this.cheerio, mangaId, id);
         });
     }
@@ -861,6 +861,7 @@ const parseChapterDetails = (data, cheerio, mangaId, id) => {
             var _a;
             return attribs[(_a = Object.keys(attribs).filter((attrib) => attrib.startsWith("data-"))[0]) !== null && _a !== void 0 ? _a : "data"];
         });
+        console.log("Pages : " + pages);
     }
     catch (err) {
         throw Error(`Unable to evaluate server chapter code.\n${err}`);
