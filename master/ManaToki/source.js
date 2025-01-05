@@ -445,7 +445,7 @@ exports.DEFAULT_URL = "http://manatoki.net";
 exports.ManaTokiInfo = {
     name: "ManaToki (마나토끼)",
     icon: "icon.png",
-    websiteBaseURL: "http://manatoki466.net",
+    websiteBaseURL: exports.DEFAULT_URL,
     version: "0.1.0",
     description: "Extension that scrapes webtoons from 마나토끼.",
     author: "Nouun",
@@ -462,7 +462,8 @@ exports.ManaTokiInfo = {
 class ManaToki extends paperback_extensions_common_1.Source {
     constructor() {
         super(...arguments);
-        this.URL = exports.DEFAULT_URL;
+        // URL = DEFAULT_URL;
+        this.URL = "http://manatoki466.net";
         this.requestManager = createRequestManager({
             requestsPerSecond: 0.5,
             requestTimeout: 10000,
